@@ -48,6 +48,7 @@
 		7F51E4DF264C233D001B57BA /* EmailValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidatorTests.swift; sourceTree = "<group>"; };
 		7FBCF38F264C362C004812FD /* Validator+Combine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Validator+Combine.swift"; sourceTree = "<group>"; };
 		7FBCF393264C3AAE004812FD /* CombineValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineValidatorTests.swift; sourceTree = "<group>"; };
+		7FBCF3A3264C3CC1004812FD /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		7FF2D0AD264B7E2B00E89925 /* QHValidator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = QHValidator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FF2D0B0264B7E2B00E89925 /* QHValidator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QHValidator.h; sourceTree = "<group>"; };
 		7FF2D0B1264B7E2B00E89925 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -81,6 +82,7 @@
 		7FF2D0A3264B7E2B00E89925 = {
 			isa = PBXGroup;
 			children = (
+				7FBCF3A3264C3CC1004812FD /* Package.swift */,
 				7FF2D0AF264B7E2B00E89925 /* Sources */,
 				7FF2D0BA264B7E2C00E89925 /* Tests */,
 				7FF2D0AE264B7E2B00E89925 /* Products */,
