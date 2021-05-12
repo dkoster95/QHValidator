@@ -9,31 +9,42 @@ import Foundation
 
 public extension Validator where Input == Double {
     func inRange(min: Double, max: Double) -> Validator<Double> {
-        return add { double in
-            return double >= min && double <= max
-        }
+        return greaterOrEqualsThan(value: min)
+                .lesserOrEqualsThan(value: max)
     }
     
     func greaterThan(value: Double) -> Validator<Double> {
         return add { double in
+            guard double > value else {
+                throw ValidationError.invalidDouble(boundsViolation: .lesser)
+            }
             return double > value
         }
     }
     
     func greaterOrEqualsThan(value: Double) -> Validator<Double> {
         return add { double in
+            guard double >= value else {
+                throw ValidationError.invalidDouble(boundsViolation: .lesser)
+            }
             return double >= value
         }
     }
     
     func lesserThan(value: Double) -> Validator<Double> {
         return add { double in
+            guard double < value else {
+                throw ValidationError.invalidDouble(boundsViolation: .greater)
+            }
             return double < value
         }
     }
     
     func lesserOrEqualsThan(value: Double) -> Validator<Double> {
         return add { double in
+            guard double <= value else {
+                throw ValidationError.invalidDouble(boundsViolation: .greater)
+            }
             return double <= value
         }
     }

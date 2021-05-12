@@ -17,8 +17,7 @@ class Validator_FloatTests: XCTestCase {
     }
     
     func testBetweenFalse() {
-        let result = try! subject.inRange(min: 0, max: 100).validate(value: 123)
-        XCTAssertFalse(result)
+        XCTAssertThrowsError(try subject.inRange(min: 0, max: 100).validate(value: 123))
     }
     
     func testGreaterTrue() {
@@ -27,8 +26,7 @@ class Validator_FloatTests: XCTestCase {
     }
     
     func testGreaterFalse() {
-        let result = try! subject.greaterThan(value: 150).validate(value: 123)
-        XCTAssertFalse(result)
+        XCTAssertThrowsError(try subject.greaterThan(value: 150).validate(value: 123))
     }
     
     func testGreaterEqualsTrue() {
@@ -37,8 +35,7 @@ class Validator_FloatTests: XCTestCase {
     }
     
     func testGreaterEqualsFalse() {
-        let result = try! subject.greaterOrEqualsThan(value: 150).validate(value: 123)
-        XCTAssertFalse(result)
+        XCTAssertThrowsError(try subject.greaterOrEqualsThan(value: 150).validate(value: 123))
     }
     
     func testLesserTrue() {
@@ -47,8 +44,7 @@ class Validator_FloatTests: XCTestCase {
     }
     
     func testLesserFalse() {
-        let result = try! subject.lesserThan(value: 100).validate(value: 123)
-        XCTAssertFalse(result)
+        XCTAssertThrowsError(try subject.lesserThan(value: 100).validate(value: 123))
     }
     
     func testLesserEqualsTrue() {
@@ -57,8 +53,7 @@ class Validator_FloatTests: XCTestCase {
     }
     
     func testLesserEqualsFalse() {
-        let result = try! subject.lesserOrEqualsThan(value: 100).validate(value: 123)
-        XCTAssertFalse(result)
+        XCTAssertThrowsError(try subject.lesserOrEqualsThan(value: 100).validate(value: 123))
     }
 
 

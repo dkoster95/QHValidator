@@ -18,13 +18,11 @@ class EmailValidatorTests: XCTestCase {
     }
     
     func testEmailInvalid() {
-        let result = try! subject.isEmailAddress().validate(value: "daniel@gmailcom")
-        XCTAssertFalse(result)
+        XCTAssertThrowsError(try subject.isEmailAddress().validate(value: "daniel@gmailcom"))
     }
     
     func testEmailInvalidWithoutAt() {
-        let result = try! subject.isEmailAddress().validate(value: "daniel.gmail.com")
-        XCTAssertFalse(result)
+        XCTAssertThrowsError(try subject.isEmailAddress().validate(value: "daniel.gmail.com"))
     }
     
     func testPasswordValid() {
@@ -33,22 +31,18 @@ class EmailValidatorTests: XCTestCase {
     }
     
     func testPasswordInvalidNoUpper() {
-        let result = try! subject.isPassword().validate(value: "daniel123")
-        XCTAssertFalse(result)
+        XCTAssertThrowsError(try subject.isPassword().validate(value: "daniel123"))
     }
     
     func testPasswordInvalidNoLower() {
-        let result = try! subject.isPassword().validate(value: "DANIEL123")
-        XCTAssertFalse(result)
+        XCTAssertThrowsError(try subject.isPassword().validate(value: "DANIEL123"))
     }
     
     func testPasswordInvalidNoNumber() {
-        let result = try! subject.isPassword().validate(value: "danielitoqwe")
-        XCTAssertFalse(result)
+        XCTAssertThrowsError(try subject.isPassword().validate(value: "danielitoqwe"))
     }
     
     func testPasswordInvalidLessThan8Characters() {
-        let result = try! subject.isPassword().validate(value: "Da12ass")
-        XCTAssertFalse(result)
+        XCTAssertThrowsError(try subject.isPassword().validate(value: "Da12ass"))
     }
 }

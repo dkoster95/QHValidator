@@ -13,10 +13,9 @@ class StringValidatorTests: XCTestCase {
     let subject = Validator<String>()
     
     func testMaxLengthIncorrect() {
-        let result = try! subject
+        XCTAssertThrowsError(try subject
             .maxLength(length: 3)
-            .validate(value: "hello")
-        XCTAssertFalse(result)
+            .validate(value: "hello"))
     }
     
     func testMaxLengthCorrect() {
@@ -34,17 +33,15 @@ class StringValidatorTests: XCTestCase {
     }
     
     func testMinLengthIncorrect() {
-        let result = try! subject
+        XCTAssertThrowsError(try subject
             .minLength(length: 3)
-            .validate(value: "he")
-        XCTAssertFalse(result)
+            .validate(value: "he"))
     }
     
     func testNotEmptyIncorrect() {
-        let result = try! subject
+        XCTAssertThrowsError(try subject
             .notEmpty()
-            .validate(value: "")
-        XCTAssertFalse(result)
+            .validate(value: ""))
     }
     
     func testNotEmptyCorrect() {
