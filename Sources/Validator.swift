@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Combine
 
 public class Validator<Input> {
     private let tail: Validator<Input>?

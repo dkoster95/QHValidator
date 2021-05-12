@@ -16,6 +16,8 @@
 		7F51E4D8264C231A001B57BA /* IntValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F51E4D7264C231A001B57BA /* IntValidatorTests.swift */; };
 		7F51E4DC264C2329001B57BA /* DoubleValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F51E4DB264C2329001B57BA /* DoubleValidatorTests.swift */; };
 		7F51E4E0264C233D001B57BA /* EmailValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F51E4DF264C233D001B57BA /* EmailValidatorTests.swift */; };
+		7FBCF390264C362C004812FD /* Validator+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBCF38F264C362C004812FD /* Validator+Combine.swift */; };
+		7FBCF399264C3AB6004812FD /* CombineValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBCF393264C3AAE004812FD /* CombineValidatorTests.swift */; };
 		7FF2D0B7264B7E2C00E89925 /* QHValidator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FF2D0AD264B7E2B00E89925 /* QHValidator.framework */; };
 		7FF2D0BE264B7E2C00E89925 /* QHValidator.h in Headers */ = {isa = PBXBuildFile; fileRef = 7FF2D0B0264B7E2B00E89925 /* QHValidator.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7FF2D0CA264B8B1F00E89925 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF2D0C9264B8B1F00E89925 /* Validator.swift */; };
@@ -44,6 +46,8 @@
 		7F51E4D7264C231A001B57BA /* IntValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntValidatorTests.swift; sourceTree = "<group>"; };
 		7F51E4DB264C2329001B57BA /* DoubleValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleValidatorTests.swift; sourceTree = "<group>"; };
 		7F51E4DF264C233D001B57BA /* EmailValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidatorTests.swift; sourceTree = "<group>"; };
+		7FBCF38F264C362C004812FD /* Validator+Combine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Validator+Combine.swift"; sourceTree = "<group>"; };
+		7FBCF393264C3AAE004812FD /* CombineValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineValidatorTests.swift; sourceTree = "<group>"; };
 		7FF2D0AD264B7E2B00E89925 /* QHValidator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = QHValidator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FF2D0B0264B7E2B00E89925 /* QHValidator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QHValidator.h; sourceTree = "<group>"; };
 		7FF2D0B1264B7E2B00E89925 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -104,6 +108,7 @@
 				7F51E4B8264C1D35001B57BA /* Validator+Double.swift */,
 				7F51E4BC264C1D4B001B57BA /* Validator+Float.swift */,
 				7F51E4C0264C1D7C001B57BA /* Validator+Email.swift */,
+				7FBCF38F264C362C004812FD /* Validator+Combine.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -118,6 +123,7 @@
 				7F51E4D7264C231A001B57BA /* IntValidatorTests.swift */,
 				7F51E4DB264C2329001B57BA /* DoubleValidatorTests.swift */,
 				7F51E4DF264C233D001B57BA /* EmailValidatorTests.swift */,
+				7FBCF393264C3AAE004812FD /* CombineValidatorTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -231,6 +237,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FBCF390264C362C004812FD /* Validator+Combine.swift in Sources */,
 				7FF2D0CA264B8B1F00E89925 /* Validator.swift in Sources */,
 				7FF2D0CE264B8B3700E89925 /* Validator+String.swift in Sources */,
 				7FF2D0D6264B8CD200E89925 /* Validator+Int.swift in Sources */,
@@ -247,6 +254,7 @@
 			files = (
 				7F51E4E0264C233D001B57BA /* EmailValidatorTests.swift in Sources */,
 				7F51E4D4264C230F001B57BA /* StringValidatorTests.swift in Sources */,
+				7FBCF399264C3AB6004812FD /* CombineValidatorTests.swift in Sources */,
 				7F51E4D0264C228B001B57BA /* ValidatorTestClass.swift in Sources */,
 				7F51E4DC264C2329001B57BA /* DoubleValidatorTests.swift in Sources */,
 				7F51E4CC264C2271001B57BA /* Validator+FloatTests.swift in Sources */,

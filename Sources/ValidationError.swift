@@ -7,7 +7,7 @@
 
 import Foundation
 
-public enum ValidationError: Error {
+public enum ValidationError: Error, Equatable {
     case with(message: String)
     case invalidRegularExpression
     case regularExpressionNotMatched
