@@ -1,5 +1,6 @@
 # QHValidator
 Input validator for Swift
+94% Code Coverage
 
 ## Validating an Integer
 ```swift
