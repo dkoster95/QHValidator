@@ -1,20 +1,20 @@
 # QHValidator
 Input validator for Swift
 
-## Sample for a validating an Integer
+## Validating an Integer
 ```swift
 	let numberValidator = Validator<Int>().lesserThan(value: 150).greaterOrEqualsThan(value: 10)
-  let result = try numberValidator.validate(value: 50)
+  	let result = try numberValidator.validate(value: 50)
 ```
-## Sample for a validating an String email
+## Validating an String email
 ```swift
 	let emailValidator = Validator<String>().notEmpty().maxLength(length: 55).isEmailAddress()
-  let result = try emailValidator.validate(value: "yourmail@mail.com")
+  	let result = try emailValidator.validate(value: "yourmail@mail.com")
 ```
-## Sample for a validating using the combine extension
+## Validating using the combine extension
 ```swift
 	let emailValidator = Validator<String>().notEmpty().maxLength(length: 55).isEmailAddress()
-  let result = emailValidator.validateAsPublisher(value: "yourmail@mail.com")
+  	let result = emailValidator.validateAsPublisher(value: "yourmail@mail.com")
 ```
 ## Requirements
 
