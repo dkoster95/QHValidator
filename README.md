@@ -6,7 +6,7 @@ Input validator for Swift
 
 - iOS 13.0+ 
 - MacOS 10.15+
-- Xcode 10.2+
+- Xcode 12.0.1+
 - Swift 5+
 
 ---
