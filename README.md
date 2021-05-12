@@ -1,6 +1,8 @@
 # QHValidator
  * Input validator for Swift
  * 94% Code Coverage
+ * Declarative Validator
+ * Functional Programming
 
 ## Validating an Integer
 ```swift
