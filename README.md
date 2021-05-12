@@ -16,6 +16,19 @@ let result = try emailValidator.validate(value: "yourmail@mail.com")
 let emailValidator = Validator<String>().notEmpty().maxLength(length: 55).isEmailAddress()
 let result = emailValidator.validateAsPublisher(value: "yourmail@mail.com")
 ```
+## Create your custom validation rule
+Validator has an add method where you set a validation rule
+```swift
+func add(rule: @escaping (Input) throws -> Bool) -> Validator<Input>
+```
+
+See how it works:
+```swift
+let emailValidator = Validator<String>().notEmpty().maxLength(length: 55).isEmailAddress().add { string in 
+  return string.count == 25
+}
+let result = try emailValidator.validate(value: "yourmail@mail.com")
+```
 ## Requirements
 
 - iOS 13.0+ 
