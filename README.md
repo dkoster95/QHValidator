@@ -3,18 +3,18 @@ Input validator for Swift
 
 ## Validating an Integer
 ```swift
-	let numberValidator = Validator<Int>().lesserThan(value: 150).greaterOrEqualsThan(value: 10)
-  	let result = try numberValidator.validate(value: 50)
+let numberValidator = Validator<Int>().lesserThan(value: 150).greaterOrEqualsThan(value: 10)
+let result = try numberValidator.validate(value: 50)
 ```
-## Validating an String email
+## Validating a String
 ```swift
-	let emailValidator = Validator<String>().notEmpty().maxLength(length: 55).isEmailAddress()
-  	let result = try emailValidator.validate(value: "yourmail@mail.com")
+let emailValidator = Validator<String>().notEmpty().maxLength(length: 55).isEmailAddress()
+let result = try emailValidator.validate(value: "yourmail@mail.com")
 ```
 ## Validating using the combine extension
 ```swift
-	let emailValidator = Validator<String>().notEmpty().maxLength(length: 55).isEmailAddress()
-  	let result = emailValidator.validateAsPublisher(value: "yourmail@mail.com")
+let emailValidator = Validator<String>().notEmpty().maxLength(length: 55).isEmailAddress()
+let result = emailValidator.validateAsPublisher(value: "yourmail@mail.com")
 ```
 ## Requirements
 
