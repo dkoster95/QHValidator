@@ -14,5 +14,5 @@ Input validator for Swift
 ## Installation
 
 ## Swift Package Manager
-QuickHatch has support for SPM, you just need to go to Xcode in the menu File/Swift Packages/Add package dependency
-and you select the version of QuickHatch.
+QHValidator has support for SPM, you just need to go to Xcode in the menu File/Swift Packages/Add package dependency
+and you select the version of QHValidator.
