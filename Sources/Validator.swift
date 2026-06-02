@@ -8,16 +8,16 @@
 import Foundation
 import Combine
 
-public class Validator<Input> {
+public final class Validator<Input: Sendable>: Sendable {
     private let tail: Validator<Input>?
-    private let validationRule: ((Input) throws -> Bool)?
+    private let validationRule: (@Sendable (Input) throws -> Bool)?
     
-    public init(validationRule: ((Input) throws -> Bool)? = nil, tail: Validator<Input>? = nil) {
+    public init(validationRule: (@Sendable (Input) throws -> Bool)? = nil, tail: Validator<Input>? = nil) {
         self.validationRule = validationRule
         self.tail = tail
     }
     
-    public func add(rule: @escaping (Input) throws -> Bool) -> Validator<Input> {
+    public func add(rule: @escaping @Sendable (Input) throws -> Bool) -> Validator<Input> {
         guard let tail = self.tail else {
             let newValidator = Validator<Input>(validationRule: rule)
             return Validator<Input>(validationRule: validationRule, tail: newValidator)
